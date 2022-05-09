@@ -1,0 +1,107 @@
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+/* POrtfolio-area */
+.portfolio .head-section h2{
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+.portfolio .head-section h2::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 150%;
+    background-color: #333;
+}
+.portfolio .head-section h2::after{
+    content: "";
+    position: absolute;
+    border: 2px solid #333;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 150%;
+    height: 14px;
+    width: 14px;
+    background-color: #fff;
+}
+.portfolio .head-section p{
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+.portfolio .lists{
+    padding-bottom: 50px;
+}
+.portfolio .lists ul{
+    list-style: none;
+}
+.portfolio .lists ul li{
+    display: inline-block;
+    padding: 10px;
+}
+.portfolio .lists ul li:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.portfolio .lists ul li.active{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.portfolio .photo{
+    padding: 2px 0;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .photo img{
+    transition: 0.3s;
+}
+.portfolio .photo .caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    padding: 0px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.portfolio .photo .caption h5{
+    color: #333;
+}
+.portfolio .photo .caption p{
+    color: var(--main-color);
+}
+.portfolio .photo:hover img{
+    transform : rotate(5deg) scale(1.2);
+}
+.portfolio .photo:hover .caption{
+    height: 30%;
+    padding: 10px;
+}
+.portfolio .btn{
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    border-radius: 0;
+}
