@@ -1,24 +1,169 @@
 :root {
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143 / 70%);
+    --main-padding: 60px;
+
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Open Sans", sans-serif;
 }
+
+/* Start Header  */
+header {
+    background-image: url(../img/landing.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+header nav:before {
+    content: "";
+    background-color: #a2a2a2;
+    width: calc(100% - 20px);
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+/* .navbar-dark .navbar-nav .nav-link {
+    margin-right: 20px;
+} */
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--main-color);
+    transition: 0.3s ease;
+}
+
+header .over-lay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+header .text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width:797px) {
+    header .text {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding-left: 0;
+    }
+
+    nav ul {
+        background-color: rgb(0 0 0 / 60%);
+        position: relative;
+        z-index: 2;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        padding-left: 15px;
+    }
+}
+
+header .text .content {
+    max-width: 500px;
+}
+
+header .text .content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+header .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+header .change-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+    cursor: pointer;
+}
+
+header .fa-angle-left {
+    left: 30px;
+}
+
+header .fa-angle-right {
+    right: 30px;
+}
+
+header .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+}
+
+header .bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .bullets li.active,
+header .bullets li:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* End Header */
 /* POrtfolio-Area */
-.portfolio .head-section h2{
+.portfolio {
+    /* islam muhammed edit this line */
+    padding: var(--main-padding);
+}
+
+.portfolio .head-section h2 {
     font-weight: normal;
     font-size: 40px;
     position: relative;
     margin-bottom: 70px;
     text-transform: uppercase;
 }
-.portfolio .head-section h2::before{
+
+.portfolio .head-section h2::before {
     content: "";
     position: absolute;
     height: 2px;
@@ -28,52 +173,62 @@ body{
     top: 150%;
     background-color: #333;
 }
-.portfolio .head-section h2::after{
+
+.portfolio .head-section h2::after {
     content: "";
     position: absolute;
     border: 2px solid #333;
     border-radius: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 150%;
     height: 14px;
     width: 14px;
     background-color: #fff;
 }
-.portfolio .head-section p{
+
+.portfolio .head-section p {
     width: 550px;
     margin: 0 auto 100px;
     max-width: 100%;
     line-height: 2;
     color: #777;
 }
-.portfolio .lists{
+
+.portfolio .lists {
     padding-bottom: 50px;
 }
-.portfolio .lists ul{
+
+.portfolio .lists ul {
     list-style: none;
 }
-.portfolio .lists ul li{
+
+.portfolio .lists ul li {
     display: inline-block;
     padding: 10px;
 }
-.portfolio .lists ul li:hover{
+
+.portfolio .lists ul li:hover {
     background-color: var(--main-color);
     color: #fff;
 }
-.portfolio .lists ul li.active{
+
+.portfolio .lists ul li.active {
     background-color: var(--main-color);
     color: #fff;
 }
-.portfolio .photo{
+
+.portfolio .photo {
     padding: 2px 0;
     position: relative;
     overflow: hidden;
 }
-.portfolio .photo img{
+
+.portfolio .photo img {
     transition: 0.3s;
 }
-.portfolio .photo .caption{
+
+.portfolio .photo .caption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -83,20 +238,25 @@ body{
     background-color: #fff;
     transition: 0.3s;
 }
-.portfolio .photo .caption h5{
+
+.portfolio .photo .caption h5 {
     color: #333;
 }
-.portfolio .photo .caption p{
+
+.portfolio .photo .caption p {
     color: var(--main-color);
 }
-.portfolio .photo:hover img{
-    transform : rotate(5deg) scale(1.2);
+
+.portfolio .photo:hover img {
+    transform: rotate(5deg) scale(1.2);
 }
-.portfolio .photo:hover .caption{
+
+.portfolio .photo:hover .caption {
     height: 30%;
     padding: 10px;
 }
-.portfolio .btn{
+
+.portfolio .btn {
     background-color: var(--main-color);
     color: white;
     padding: 15px 20px;
@@ -105,16 +265,19 @@ body{
     margin: 30px auto;
     border-radius: 0;
 }
-.portfolio .video video{
+
+.portfolio .video video {
     width: 100%;
     position: relative;
-    
+
 }
-.portfolio .video{
+
+.portfolio .video {
     margin-top: 80px;
     position: relative;
 }
-.portfolio .video::after{
+
+.portfolio .video::after {
     content: "";
     position: absolute;
     top: 0;
@@ -123,20 +286,23 @@ body{
     height: 100%;
     background-color: rgb(0 0 0 / 40%);
 }
-.portfolio .text .btn{
+
+.portfolio .text .btn {
     background-color: #000;
     color: white;
 
 }
-.portfolio .text{
+
+.portfolio .text {
     position: absolute;
     color: #fff;
     z-index: 2;
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: var(--transparent-color);
     padding: 50px;
 }
+
 /* End Portfolio-Area */
