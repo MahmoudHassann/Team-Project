@@ -10,7 +10,7 @@
 body{
     font-family: "Open Sans", sans-serif;
 }
-/* POrtfolio-area */
+/* POrtfolio-Area */
 .portfolio .head-section h2{
     font-weight: normal;
     font-size: 40px;
@@ -105,3 +105,38 @@ body{
     margin: 30px auto;
     border-radius: 0;
 }
+.portfolio .video video{
+    width: 100%;
+    position: relative;
+    
+}
+.portfolio .video{
+    margin-top: 80px;
+    position: relative;
+}
+.portfolio .video::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+}
+.portfolio .text .btn{
+    background-color: #000;
+    color: white;
+
+}
+.portfolio .text{
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--transparent-color);
+    padding: 50px;
+}
+/* End Portfolio-Area */
