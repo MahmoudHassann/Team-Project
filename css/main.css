@@ -150,12 +150,15 @@ header .bullets li:hover {
 
 /* End Header */
 /* POrtfolio-Area */
-.portfolio , .about { 
+.portfolio,
+.about {
     /* islam muhammed edit this line */
     padding: var(--main-padding);
 }
 
-.portfolio .head-section h2 , .about .about-title h2 {
+.portfolio .head-section h2,
+.about .about-title h2,
+.service .service-title h2 {
     font-weight: normal;
     font-size: 40px;
     position: relative;
@@ -163,7 +166,9 @@ header .bullets li:hover {
     text-transform: uppercase;
 }
 
-.portfolio .head-section h2::before , .about .about-title h2::before {
+.portfolio .head-section h2::before,
+.about .about-title h2::before,
+.service .service-title h2::before {
     content: "";
     position: absolute;
     height: 2px;
@@ -174,7 +179,9 @@ header .bullets li:hover {
     background-color: #333;
 }
 
-.portfolio .head-section h2::after , .about .about-title h2::after {
+.portfolio .head-section h2::after,
+.about .about-title h2::after,
+.service .service-title h2::after {
     content: "";
     position: absolute;
     border: 2px solid #333;
@@ -187,7 +194,7 @@ header .bullets li:hover {
     background-color: #fff;
 }
 
-.portfolio .head-section p {
+.portfolio .head-section p,.service .service-title p {
     width: 550px;
     margin: 0 auto 100px;
     max-width: 100%;
@@ -336,20 +343,70 @@ header .bullets li:hover {
 }
 
 
-@media screen and (max-width : 770px){
+
+
+
+
+/* about  */
+
+.service-p p {
+    line-height: 32px;
+    font-size: 18px;
+    color: #818181;
+}
+
+.service-p h4 {
+    color: #19c8fa;
+}
+
+.service .image {
+    background-image: url(../img/design-features.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.img-srv {
+    bottom: -120px;
+}
+
+.olay {
+    background-color: rgba(8, 8, 8, 0.7)
+}
+
+.serv-2-img {
+    background-color: #0e6e8fab;
+}
+
+.w-30 {
+    width: 50%;
+}
+
+
+@media screen and (max-width : 770px) {
     .stats {
         height: 600px;
     }
+
     .about img {
         bottom: -130px;
     }
 }
 
-@media screen and (max-width : 600px){
+@media screen and (max-width : 600px) {
     .stats {
         height: 1200px;
     }
 }
-
-
-/* about  */
+@media (max-width: 767px) {
+    .imge {
+        display: none !important;
+    }
+    .serv-2-img{
+        width: 100% !important;
+    }
+    .olay{
+        padding-bottom: 50px;
+    }
+}
